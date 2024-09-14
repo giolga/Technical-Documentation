@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f8fb;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header {
+    padding: 20px;
+    background-color: #35424a;
+    text-align: center;
+    color: white;
+}
+
+    
+.navbar {
+    width: 20%;
+    background-color: #2c3e50;
+    padding: 15px;
+    height: 100vh;
+    overflow: auto;
+    flex-shrink: 0; 
+}
+
+.navbar ul{
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #2753a7;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+#documentation {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+#documentation section {
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+}
+
+#documentation h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+#info {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+#info section {
+    margin-bottom: 20px;
+}
+
+#footer {
+    width: 100%;
+    padding: 2rem;
+    background-color: #79a3b1;
+    font-size: 25px;
+    display: flex;
+    font-weight: bold;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 750px) {
+    .container{
+        flex-direction: column;
+    }
+
+    .navbar {
+        width: 100%;
+        height: auto;
+        order: -1; /* Move the navbar to the top flex prop */
+    }
+
+    #documentation {
+        width: 100%;
+    }
+
+    #footer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    * {
+        min-width: 250px;
+    }
+
+    .page-header {
+        padding: 10px 0;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar ul li a {
+        padding: 8px;
+    }
+
+    #documentation {
+        padding: 10px;
+        min-width: 200px;
+    }
+
+    #footer {
+        width: 100%;
+    }
+}
